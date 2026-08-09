@@ -74,3 +74,34 @@ if (confettiBtn) {
             }
         });
     }
+
+
+if (confettiBtn) {
+        confettiBtn.addEventListener("click", function() {
+            // Memunculkan efek confetti
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#d4af37', '#ffffff', '#2c2c2c']
+            });
+
+   
+            const titleName = document.getElementById("titleName");
+            if (titleName) {
+                titleName.textContent = "Kikin Sakinah, S.Pd.";
+            }
+
+            
+            document.body.classList.remove("locked");
+
+           
+            document.getElementById("gallery").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+
+            if (!isPlaying) {
+                toggleMusic();
+            }
+        });
+    }
