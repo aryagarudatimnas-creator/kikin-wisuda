@@ -282,3 +282,8 @@ button:hover {
     display: inline-block;
     animation: fadeInOut 1.5s ease-out forwards;
 }
+
+body.locked {
+    overflow: hidden;
+    height: 100vh;
+}
