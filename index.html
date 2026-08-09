@@ -6,7 +6,7 @@
     <title>Happy Graduation Kikin! 🎓</title>
     
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="icon" type="image/png" href="bunga.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -50,16 +50,16 @@
 
         <div class="message-box">
             <h3>Dibaca yaa</h3>
-            <p>
-                Walaupun aku baru kenal kamu, Kikin, dan aku nggak tau gimana proses panjang yang harus kamu lewati sampai akhirnya bisa mendapat gelar S.Pd. ini, tapi percayalah, aku sangat bangga sama kamu.
-            </p>
-            <p>
-                Semoga ilmu barunya berkah dan bisa bawa kamu ke tempat-tempat hebat yang kamu impikan. 
-                Jangan lupa istirahat sebentar, dan jangan ngelupain orang-orang yang udah support kamu sejauh ini okeiii. You did a great job!
-            </p>
-            <p>Sekali lagi selamat yaaa</p>
             
-            <p class="signature" style="text-align: right; margin-top: 20px;">- Arya Rachman Praditya</p>
+            <div id="bookPage" class="book-page">
+                <p>Kikin, tolong dibaca yaa!!</p>
+            </div>
+
+            <div class="book-nav">
+                <button id="prevBtn" class="nav-btn" onclick="prevPage()" disabled>⬅️ Sebelumnya</button>
+                <span id="pageIndicator" class="page-indicator">1 / 6</span>
+                <button id="nextBtn" class="nav-btn" onclick="nextPage()">Selanjutnya ➡️</button>
+            </div>
         </div>
     </section>
 
