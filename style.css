@@ -17,6 +17,11 @@ body {
     overflow-x: hidden;
 }
 
+body.locked {
+    overflow: hidden;
+    height: 100vh;
+}
+
 button, a, .polaroid {
     -webkit-tap-highlight-color: transparent;
     outline: none;
@@ -179,11 +184,82 @@ button:hover {
     color: #d4af37;
 }
 
-.message-box p {
+.book-page {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeInPage 0.5s ease-in-out;
     font-size: 15px;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 15px;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.book-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    border-top: 1px solid #eae5dc;
+    padding-top: 15px;
+}
+
+.nav-btn {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto !important;
+    max-width: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #d4af37;
+    color: #2c2c2c;
+}
+
+.nav-btn:disabled {
+    background-color: #ddd;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.page-indicator {
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+}
+
+.bouquet-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.bouquet-img {
+    width: 140px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: popUpBunga 0.6s ease-out;
+}
+
+@keyframes popUpBunga {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .signature {
@@ -273,17 +349,22 @@ button:hover {
 }
 
 
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(10px); }
-    100% { opacity: 1; transform: translateY(0); }
+/* =========================================
+   STYLE FOTO KECIL (PERSEGI) DI TANDA TANGAN
+   ========================================= */
+.signature-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.fade-title {
-    display: inline-block;
-    animation: fadeInOut 1.5s ease-out forwards;
-}
-
-body.locked {
-    overflow: hidden;
-    height: 100vh;
+.profile-mini {
+    width: 40px;  /* Lebar foto kecil */
+    height: 50px; /* Tinggi foto kecil (atur sesuai selera, misal proporsi pas foto) */
+    object-fit: cover;
+    border-radius: 4px; /* Sudut sedikit melengkung agar estetik */
+    border: 1px solid #d4af37; /* Bingkai tipis warna emas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
