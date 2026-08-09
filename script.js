@@ -62,11 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const pages = [
     "Kikin, tolong dibaca yaa!!",
-    "Gua tau kin, kita baru kenal 1 sama lain dari sepupu gua.. bahkan kita ketemu aja belum WKWKWKWK",
-    "Tapi, selamat yaaa kin! Meskipun kita belum kenal disaat lu lagi ngelewatin proses panjang skripsi dan lain lain yang pastinya bikin lu muak dan stress, ijinin gue buat ngasih apresiasi sebesar-besarnya ke lu karna lu udah hebat banget ngelewatin masa itu ^^",
-    "I know this is a little bit cliche, but I wanna say \"i'm so proud of u\". Gua harap kita bisa ketemu dan berbagi cerita langsung tanpa chattingan lagi.",
-    "Apapun mimpi dan tujuan yang mau lu raih, gua harap lu tau pasti bahwa lu bisa dapetin hal itu. Karna lu adalah kikin, gua percaya lu pasti bisa.",
-    "Sehat selalu dan bahagia selalu yaa kin, gua harap kebahagiaan lu nantinya ada part dimana gua lah sumber kebahagiaan itu HAHAHAHAHAH just kidding <br><br><div class='bouquet-container'><img src='bunga.png' alt='Virtual Bouquet' class='bouquet-img'></div><br><strong>Once again, happy graduation kikin!!</strong><br><br><div class='signature-box'><img src='addit.png' alt='Arya' class='profile-mini'><span>- Arya Rachman Praditya</span></div>"
+    "Aku tau kin, kita baru kenal setelah di kenalin sama bila.. bahkan kita ketemu aja belum WKWKWKWK",
+    "Tapi, selamat yaaa kin! Meskipun kita belum kenal disaat kamu lagi ngelewatin proses panjang skripsi dan lain lain yang pastinya bikin kamu muak dan stress, ijinin aku buat ngasih apresiasi sebesar-besarnya ke kamu karna kamu udah hebat banget ngelewatin masa itu ^^",
+    "I know this is a little bit cliche, but I wanna say \"i'm so proud of u\". aku harap kita bisa ketemu dan berbagi cerita langsung tanpa chattingan lagi.",
+    "Apapun mimpi dan tujuan yang mau kamu raih, aku harap kamu tau pasti bahwa kamu bisa dapetin hal itu. Karna kamu adalah KIKIN, aku percaya kamu pasti bisa.",
+    "Sehat selalu dan bahagia selalu yaa kin, aku harap kebahagiaan kamu nantinya ada part dimana aku lah sumber kebahagiaan itu HAHAHAHAHAH just kidding <br><br><div class='bouquet-container'><img src='bunga.png' alt='Virtual Bouquet' class='bouquet-img'></div><br><strong>Once again, happy graduation kikin!!</strong><br><br><div class='signature-box'><img src='addit.png' alt='Arya' class='profile-mini'><span>- Arya Rachman Praditya</span></div>"
 ];
 
 let currentPage = 0;
