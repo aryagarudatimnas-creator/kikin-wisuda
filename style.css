@@ -278,7 +278,7 @@ button:hover {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.fade-text {
+.fade-title {
     display: inline-block;
-    animation: fadeInOut 1.2s ease-out forwards;
+    animation: fadeInOut 1.5s ease-out forwards;
 }
