@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Graduation Kikin! 🎓</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts untuk kesan elegan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Canvas untuk efek Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Bagian Sambutan -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="subtitle">A little appreciation post for</p>
+            <h1>Kikin Sakinah 🎓✨</h1>
+            <p class="description">
+                Walau terhalang jarak, apresiasi buat kerja keras kamu harus tetap sampai. 
+                Selamat atas gelar barunya! Ini ada sedikit galeri mini buat merayakan hari spesialmu.
+            </p>
+            <button id="scrollBtn">Buka Galeri ➔</button>
+        </div>
+    </header>
+
+    <!-- Bagian Galeri Foto Polaroid -->
+    <section id="gallery" class="gallery-section">
+        <div class="polaroid-wrapper">
+            <!-- Foto 1 -->
+            <div class="polaroid p1">
+                <img src="wisuda1.jpg" alt="Momen Wisuda 1">
+                <p class="caption">Keren banget! ✨</p>
+            </div>
+            
+            <!-- Foto 2 (Tengah) -->
+            <div class="polaroid p2">
+                <img src="wisuda2.jpg" alt="Momen Wisuda 2">
+                <p class="caption">Ciee Sarjana 🎓</p>
+            </div>
+            
+            <!-- Foto 3 -->
+            <div class="polaroid p3">
+                <img src="wisuda3.jpg" alt="Momen Wisuda 3">
+                <p class="caption">So proud of you! 💛</p>
+            </div>
+        </div>
+
+        <!-- Pesan Penutup -->
+        <div class="message-box">
+            <h3>From Me to You</h3>
+            <p>
+                Semoga ilmu barunya berkah dan bisa bawa kamu ke tempat-tempat hebat yang kamu impikan. 
+                Jangan lupa istirahat sebentar, napas dulu, sebelum lanjut ngejar mimpi yang lain ya. You did a great job!
+            </p>
+            <p class="signature">- Arya</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- ================= MUSIC PLAYER ================= -->
+    <!-- Pastikan kamu punya file lagu bernama music.mp3 di dalam folder yang sama -->
+    <audio id="bgMusic" loop>
+        <source src="dancing.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Musik Melayang -->
+    <div id="musicToggle" class="music-toggle">
+        <span id="musicIcon">🎵</span>
+    </div>
+</body>
+</html>

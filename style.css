@@ -1,0 +1,294 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfbf8; /* Warna broken white elegan */
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Confetti Canvas */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Biar tetap bisa nge-klik elemen di bawahnya */
+    z-index: 9999;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, #ffffff 0%, #f4f1ea 100%);
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.subtitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 65px);
+    color: #2c2c2c;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #d4af37; /* Sentuhan warna emas khas wisuda */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ================= GALLERY SECTION ================= */
+.gallery-section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.polaroid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 15px 15px 25px 15px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 280px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid #f0f0f0;
+}
+
+.caption {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    color: #444;
+}
+
+/* Efek miring berantakan pada polaroid */
+.p1 { transform: rotate(-5deg); }
+.p2 { transform: rotate(2deg) translateY(-20px); }
+.p3 { transform: rotate(-3deg); }
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ================= MESSAGE BOX ================= */
+.message-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.message-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.message-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #2c2c2c !important;
+    font-weight: 600;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .polaroid-wrapper { gap: 20px; }
+    .p2 { transform: rotate(2deg) translateY(0); } /* Reset posisi foto tengah di HP */
+}
+
+
+/* =========================================
+   MUSIC PLAYER BUTTON
+========================================= */
+.music-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #2c2c2c;
+    color: #d4af37; /* Warna emas */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 10000;
+    transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    background-color: #d4af37;
+    color: #2c2c2c;
+}
+
+/* Efek cahaya berdenyut saat musik menyala */
+.playing {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+@media (max-width: 768px) {
+    .music-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERIES (TAMPILAN KHUSUS HP)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Menyesuaikan jarak dan ukuran teks di tampilan awal */
+    .hero {
+        padding: 0 15px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Mengurangi jarak kosong yang terlalu besar di HP */
+    .gallery-section {
+        padding: 60px 15px; 
+    }
+
+    /* Mengatur polaroid agar menumpuk rapi ke bawah */
+    .polaroid-wrapper { 
+        gap: 25px; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .polaroid {
+        width: 100%; /* Membuat lebar foto fleksibel... */
+        max-width: 320px; /* ...tapi maksimal 320px agar tidak terlalu besar */
+    }
+
+    /* Menghilangkan efek miring di HP agar tidak berantakan / keluar layar */
+    .p1, .p2, .p3 { 
+        transform: rotate(0deg) translateY(0); 
+    }
+
+    /* Menyesuaikan ukuran kotak pesan dan teks di dalamnya */
+    .message-box {
+        padding: 25px 20px;
+        width: 95%;
+    }
+
+    .message-box h3 {
+        font-size: 22px;
+    }
+
+    .message-box p {
+        font-size: 14px;
+    }
+
+    .signature {
+        font-size: 18px;
+    }
+
+    /* Penyesuaian tombol musik (sesuai kodemu sebelumnya) */
+    .music-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
